@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Shortcut",
+  "version": "0.1.0",
+  "description": "Your Prompt, One Shortcut Away.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "dist/popup/index.html",
+    "default_title": "Prompt Shortcut"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "open-prompt-selector": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Open prompt selector"
+    }
+  }
+}

@@ -209,8 +209,8 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-left">
-          <div className="header-icon">F</div>
-          <span>PromptFlow</span>
+          <div className="header-icon">P</div>
+          <span>PromptDash</span>
         </div>
         <div className="header-right">
           <button
